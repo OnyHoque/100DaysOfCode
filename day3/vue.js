@@ -16,13 +16,16 @@ var obj = new Vue({
         addToList: function() {
             document.getElementById('table1').style.visibility = 'visible';
             document.getElementById('sort').style.visibility = 'visible';
-            obj.items.push(obj.value);
+            obj.items.push(parseInt(obj.value));
             document.getElementById('table1').innerHTML = arrToTable(obj.items);
         },
 
         delToList: function() {
             obj.items.pop();
-            document.getElementById('table1').innerHTML = arrToTable(obj.items);
+            document.getElementById('table1').innerHTML = "";
+            if(obj.items.length>0){
+                document.getElementById('table1').innerHTML = arrToTable(obj.items);
+            }
         },
 
         bubbleSort: function() {
