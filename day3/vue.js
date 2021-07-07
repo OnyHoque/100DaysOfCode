@@ -8,7 +8,7 @@ var obj = new Vue({
     data: {
         message: 'Hello Vue!',
         value: '',
-        items: [1500, 100, 900, 250, 70, 28, 90],
+        items: [10, 10, 90, 60, 20, 50, 100, 100, 100, 100, 100, 20],
         sortedItems: [],
 
     },
@@ -27,11 +27,12 @@ var obj = new Vue({
 
         bubbleSort: function() {
             var table3 = document.getElementById('table3');
+            table3.innerHTML = "";
             var arr = clone(obj.items);
             var flag = true;
             var str = "";
 
-            while (flag) {
+            for (var j = 0; j < arr.length - 1; ++j) {
                 flag = false;
                 for (var i = 0; i < arr.length - 1; ++i) {
                     if (arr[i] > arr[i + 1]) {
@@ -44,10 +45,12 @@ var obj = new Vue({
                 }
             }
             table3.innerHTML = str;
+            obj.sortedItems = clone(arr);
         },
 
         selectionSort: function() {
             var table3 = document.getElementById('table3');
+            table3.innerHTML = "";
             var arr = clone(obj.items);
             var str = "";
             for (var i = 0; i < arr.length - 1; i++) {
@@ -64,10 +67,12 @@ var obj = new Vue({
             }
             str += arrToTable(arr);
             table3.innerHTML = str;
+            obj.sortedItems = clone(arr);
         },
 
         insertionSort: function() {
             var table3 = document.getElementById('table3');
+            table3.innerHTML = "";
             var arr = clone(obj.items);
             var str = "";
             let i, key, j;
@@ -83,6 +88,7 @@ var obj = new Vue({
             }
             str += arrToTable(arr);
             table3.innerHTML = str;
+            obj.sortedItems = clone(arr);
         },
     }
 })
