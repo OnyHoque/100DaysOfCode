@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 html,
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .body-div {
     width: 100%;
     height: 100%;
+}
+
+h2 {
+    font-stretch: ultra-expanded;
+    font-weight: 400;
+    font-size: 30px;
 }
 
 table {
@@ -22,4 +30,19 @@ table {
 td {
     padding: 15px;
     margin: 10px;
+}
+
+input {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+button {
+    background-color: black;
+    border: solid 2px white;
+    border-radius: 12px;
+    padding: 5px 10px;
+    margin: 10px;
+    color: white;
 }

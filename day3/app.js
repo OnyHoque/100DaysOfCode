@@ -14,16 +14,22 @@ var obj = new Vue({
     },
     methods: {
         addToList: function() {
-            document.getElementById('table1').style.visibility = 'visible';
-            document.getElementById('sort').style.visibility = 'visible';
-            obj.items.push(parseInt(obj.value));
-            document.getElementById('table1').innerHTML = arrToTable(obj.items);
+            var value = obj.value;
+            if (!isNaN(value) && value.length > 0) {
+                document.getElementById('table1').style.visibility = 'visible';
+                document.getElementById('sort').style.visibility = 'visible';
+                obj.items.push(parseInt(obj.value));
+                document.getElementById('table1').innerHTML = arrToTable(obj.items);
+            } else {
+                alert("Please enter a number!");
+            }
+
         },
 
         delToList: function() {
             obj.items.pop();
             document.getElementById('table1').innerHTML = "";
-            if(obj.items.length>0){
+            if (obj.items.length > 0) {
                 document.getElementById('table1').innerHTML = arrToTable(obj.items);
             }
         },
