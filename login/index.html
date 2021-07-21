@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="resources/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/bootstrap-theme.min.css">
+    <script src="resources/vue.js"></script>
+    <script src="resources/vue-router.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container text-center" id="VueApp">
+        <table>
+            <tr>
+                <td>
+                    <h3>Welcome back!</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="username" name="username" v-model="username" placeholder="Enter your username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="password" name="password" v-model="password" placeholder="Enter your password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="submit">Login</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+
+<script src="resources/bootstrap.min.js"></script>
+<script src="resources/jquery.min.js"></script>
+<script src="app.js"></script>
+
+</html>
