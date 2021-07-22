@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Signup Page</title>
     <script src="resources/jquery.min.js"></script>
     <link rel="stylesheet" href="resources/bootstrap.min.css">
     <link rel="stylesheet" href="resources/bootstrap-theme.min.css">
@@ -18,7 +18,12 @@
         <table>
             <tr>
                 <td>
-                    <h3>Welcome back!</h3>
+                    <h3>Hi, new user!</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="email" name="email" v-model="email" placeholder="Enter your email address">
                 </td>
             </tr>
             <tr>
@@ -33,13 +38,21 @@
             </tr>
             <tr>
                 <td>
-                    <button v-on:click="loginVerify" id="login">Login</button>
+                    <input type="text" id="passwordVerify" name="passwordVerify" v-model="passwordVerify" @keypress="check($event)" placeholder="Enter your password again">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button v-on:click="singupVerify" id="Signup">Signup</button>
                 </td>
             </tr>
         </table>
 
     </div>
 </body>
+
+
+
 
 <script src="resources/bootstrap.min.js"></script>
 <script src="resources/jquery.min.js"></script>
